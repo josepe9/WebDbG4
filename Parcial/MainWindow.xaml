@@ -1,0 +1,55 @@
+﻿<Window x:Class="Parcial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parcial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="450">
+    <Grid Background="Wheat">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="IGLESIA DEL CARMEN RECAUDOS" FontSize="28" FontWeight="Bold"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Content="     Limosnas       " Height="30" FontSize="18"></Label>
+            <TextBox Name="limosnas" Width="150" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label Content="     Matrimonios  " Height="30" FontSize="18"></Label>
+            <TextBox Name="matrimonio" Width="150" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Label Content="     Exequias        " Height="30" FontSize="18"></Label>
+            <TextBox Name="exequias" Width="150" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Label Content="     Otros             " Height="30" FontSize="18"></Label>
+            <TextBox Name="otros" Width="150" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="Calcular" Margin="5" Content="Calcular" Height="30" Width="300" Click="Btn_Calcular" />
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Name="Total" Width="350" Height="150" Background="LightCyan" Foreground="Black" Margin="5" FontSize="16" Text="Total"/>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Name="Promedio" Width="350" Height="50" Background="LightCyan" Foreground="Black" Margin="5" FontSize="16" Text="Promedio"/>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Name="Concepto" Width="350" Height="50" Background="LightCyan" Foreground="Black" Margin="5" FontSize="16" Text="Mayor Concepto"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
